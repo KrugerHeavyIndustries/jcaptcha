@@ -32,7 +32,7 @@
     </dependency>
   
     <dependency>
-        <groupId>com.sun.speech.freetts</groupId>
+        <groupId>com.sun.speech</groupId>
         <artifactId>freetts</artifactId>
         <version>1.2.1</version>
     </dependency>
@@ -117,5 +117,12 @@
       
     </plugins>
   </build> 
-
+	<repositories>
+    <repository>
+        <id>fortytwo-maven2</id>
+        <layout>default</layout>
+        <name>Forty Two</name>
+        <url>http://fortytwo.net/maven2</url>
+    </repository>
+  </repositories>  
 </project>

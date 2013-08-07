@@ -51,7 +51,7 @@
       <includes>
         <include>com.octo.captcha:jcaptcha-extension-buffered-engine</include>
         <include>com.octo.captcha:jcaptcha-extension-ehcache-store</include>
-        <include>com.octo.captcha:jcaptcha-extension-jbosscache-store</include>
+        <!-- <include>com.octo.captcha:jcaptcha-extension-jbosscache-store</include> -->
         <include>com.octo.captcha:jcaptcha-extension-sound-freetts</include>
       </includes>
       <binaries>
@@ -64,7 +64,7 @@
       <includes>
         <include>com.octo.captcha:jcaptcha-integration-acegi</include>
         <include>com.octo.captcha:jcaptcha-integration-filter</include>
-        <include>com.octo.captcha:jcaptcha-integration-roller</include>
+        <!-- <include>com.octo.captcha:jcaptcha-integration-roller</include> -->
         <include>com.octo.captcha:jcaptcha-integration-struts</include>
       </includes>
       <binaries>

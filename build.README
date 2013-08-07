@@ -1,0 +1,7 @@
+JAVA_HOME=$(/usr/libexec/java_home --version 1.5) JDK4_HOME=$(/usr/libexec/java_home --version 1.5) mvn package assembly:assembly -Dmaven.test.skip=true
+
+NOTES: 
+
+1. Package instruction will build jar files for projects and modules
+2. Assembly instruction will build uber jar and distributable zip file
+3. Assembly instruction files in src/assembly/bin.xml and jcaptcha/src/assembly/uber-jar.xml

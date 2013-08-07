@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Classdiagram>
+  <settings>
+    <option name="layoutOnChanges" value="true" />
+    <option name="paintDepends" value="true" />
+    <option name="paintExtends" value="true" />
+    <option name="paintInner" value="true" />
+    <option name="paintUses" value="true" />
+    <option name="paintImplements" value="true" />
+  </settings>
+  <classes>
+    <class name="com.octo.captcha.CaptchaFactory" x="480" y="116">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.image.ImageCaptchaFactory" x="450" y="248">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.Captcha" x="754" y="90">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.image.ImageCaptcha" x="725" y="252">
+      <option name="fieldsExpanded" value="true" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="true" />
+    </class>
+    <class name="com.octo.captcha.CaptchaEngine" x="106" y="100">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.image.DefaultImageCaptchaEngine" x="50" y="469">
+      <option name="fieldsExpanded" value="true" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="true" />
+    </class>
+    <class name="com.octo.captcha.image.ImageCaptchaEngine" x="78" y="247">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+  </classes>
+  <stickycomponents />
+  <textcomponents />
+  <connectors>
+    <connector from="com.octo.captcha.image.DefaultImageCaptchaEngine" to="com.octo.captcha.image.ImageCaptchaFactory">
+      <anchor constraint="1" type="2" x="333" y="469" />
+      <anchor constraint="1" type="2" x="458" y="390" />
+      <decorator type="4" description="-  factories" />
+    </connector>
+    <connector from="com.octo.captcha.image.DefaultImageCaptchaEngine" to="com.octo.captcha.image.ImageCaptchaEngine">
+      <anchor constraint="1" type="2" x="209" y="469" />
+      <anchor constraint="1" type="2" x="209" y="419" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.image.ImageCaptcha" to="com.octo.captcha.Captcha">
+      <anchor constraint="1" type="2" x="868" y="252" />
+      <anchor constraint="1" type="2" x="867" y="202" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.image.ImageCaptchaEngine" to="com.octo.captcha.CaptchaEngine">
+      <anchor constraint="1" type="2" x="209" y="247" />
+      <anchor constraint="1" type="2" x="209" y="197" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.image.ImageCaptchaFactory" to="com.octo.captcha.CaptchaFactory">
+      <anchor constraint="1" type="2" x="570" y="248" />
+      <anchor constraint="1" type="2" x="570" y="198" />
+      <decorator type="1" description="" />
+    </connector>
+  </connectors>
+</Classdiagram>
+

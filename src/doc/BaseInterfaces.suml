@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Classdiagram>
+  <settings>
+    <option name="layoutOnChanges" value="true" />
+    <option name="paintDepends" value="false" />
+    <option name="paintExtends" value="true" />
+    <option name="paintInner" value="true" />
+    <option name="paintUses" value="true" />
+    <option name="paintImplements" value="true" />
+  </settings>
+  <classes>
+    <class name="com.octo.captcha.pix.PixCaptchaEngine" x="0" y="219">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.CaptchaFactory" x="50" y="566">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.PixCaptcha" x="466" y="728">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.Captcha" x="420" y="566">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.PixCaptchaFactory" x="63" y="698">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.DefaultPixCaptchaEngine" x="50" y="349">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.CaptchaEngine" x="99" y="100">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.CaptchaException" x="50" y="975">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="true" />
+    </class>
+  </classes>
+  <stickycomponents />
+  <textcomponents />
+  <connectors>
+    <connector from="com.octo.captcha.pix.PixCaptchaFactory" to="com.octo.captcha.CaptchaFactory">
+      <anchor constraint="1" type="2" x="140" y="698" />
+      <anchor constraint="1" type="2" x="140" y="648" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.DefaultPixCaptchaEngine" to="com.octo.captcha.pix.PixCaptchaFactory">
+      <anchor constraint="1" type="2" x="188" y="416" />
+      <anchor constraint="1" type="2" x="146" y="698" />
+      <decorator type="4" description="-  factories" />
+    </connector>
+    <connector from="com.octo.captcha.pix.PixCaptcha" to="com.octo.captcha.Captcha">
+      <anchor constraint="1" type="2" x="533" y="728" />
+      <anchor constraint="1" type="2" x="533" y="678" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.DefaultPixCaptchaEngine" to="com.octo.captcha.pix.PixCaptchaEngine">
+      <anchor constraint="1" type="2" x="162" y="349" />
+      <anchor constraint="1" type="2" x="115" y="301" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.PixCaptchaEngine" to="com.octo.captcha.CaptchaEngine">
+      <anchor constraint="1" type="2" x="117" y="219" />
+      <anchor constraint="1" type="2" x="154" y="182" />
+      <decorator type="1" description="" />
+    </connector>
+  </connectors>
+</Classdiagram>
+

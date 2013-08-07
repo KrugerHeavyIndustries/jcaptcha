@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+<project>
+  <parent>
+    <artifactId>jcaptcha-home</artifactId>
+    <groupId>com.octo.captcha</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.octo.captcha</groupId>
+  <artifactId>jcaptcha-extension-ehcache-store</artifactId>
+  <name>Extension EHCache Store</name>
+  <version>1.0</version>
+  <dependencies>
+    <dependency>
+      <groupId>com.octo.captcha</groupId>
+      <artifactId>jcaptcha</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.octo.captcha</groupId>
+      <artifactId>jcaptcha-common-test</artifactId>
+      <version>1.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>net.sf.ehcache</groupId>
+        <artifactId>ehcache</artifactId>
+        <version>1.3.0</version>
+    </dependency>    
+  </dependencies>
+</project>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+<project>
+  <parent>
+    <artifactId>jcaptcha-home</artifactId>
+    <groupId>com.octo.captcha</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.octo.captcha</groupId>
+  <artifactId>jcaptcha-integration-struts</artifactId>
+  <name>Integration Struts</name>
+  <version>1.0</version>
+  <issueManagement>
+    <system>Jira</system>
+    <url>http://forge.octo.com/jcaptcha/jira/browse/JASTR</url>
+  </issueManagement>  
+  <dependencies>
+    <dependency>
+      <groupId>com.octo.captcha</groupId>
+      <artifactId>jcaptcha</artifactId>
+      <version>1.0</version>
+    </dependency>  
+    <dependency>
+      <groupId>struts</groupId>
+      <artifactId>struts</artifactId>
+      <version>1.2.7</version>
+    </dependency>
+  </dependencies>
+</project>

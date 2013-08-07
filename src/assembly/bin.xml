@@ -1,0 +1,77 @@
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+<assembly>
+  <id>bin</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <files>
+    <file>
+      <source>jcaptcha/LICENSE.txt</source>
+      <outputDirectory>/</outputDirectory>
+    </file>
+    <file>
+      <source>src/assembly/README.txt</source>
+      <outputDirectory>/</outputDirectory>
+    </file>
+    <file>
+      <source>integration-struts/src/main/resources/META-INF/jcaptcha.tld</source>
+      <outputDirectory>/</outputDirectory>
+    </file>    
+  </files>
+  <fileSets>
+    <fileSet>
+      <directory>jcaptcha/target</directory>
+      <outputDirectory>/</outputDirectory>
+      <useDefaultExcludes>true</useDefaultExcludes>
+      <includes>
+        <include>jcaptcha-*-all.jar</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>src/main/resources</directory>
+      <outputDirectory>/</outputDirectory>
+      <useDefaultExcludes>true</useDefaultExcludes>
+      <includes>
+        <include>fisheyebackgrounds/*</include>
+        <include>gimpybackgrounds/*</include>
+      </includes>
+    </fileSet>    
+    <fileSet>
+      <directory>site-deploy</directory>
+      <outputDirectory>/docs/</outputDirectory>
+    </fileSet>    
+  </fileSets>
+  <moduleSets>
+    <moduleSet>
+      <includes>
+        <include>com.octo.captcha:jcaptcha-extension-buffered-engine</include>
+        <include>com.octo.captcha:jcaptcha-extension-ehcache-store</include>
+        <include>com.octo.captcha:jcaptcha-extension-jbosscache-store</include>
+        <include>com.octo.captcha:jcaptcha-extension-sound-freetts</include>
+      </includes>
+      <binaries>
+        <includeDependencies>false</includeDependencies>
+        <outputDirectory>extensions/</outputDirectory>
+        <unpack>false</unpack>
+      </binaries>
+    </moduleSet>
+    <moduleSet>
+      <includes>
+        <include>com.octo.captcha:jcaptcha-integration-acegi</include>
+        <include>com.octo.captcha:jcaptcha-integration-filter</include>
+        <include>com.octo.captcha:jcaptcha-integration-roller</include>
+        <include>com.octo.captcha:jcaptcha-integration-struts</include>
+      </includes>
+      <binaries>
+        <includeDependencies>false</includeDependencies>
+        <outputDirectory>integrations/</outputDirectory>
+        <unpack>false</unpack>
+      </binaries>
+    </moduleSet>
+  </moduleSets>  
+</assembly>

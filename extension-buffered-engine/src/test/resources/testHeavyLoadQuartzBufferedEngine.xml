@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+
+<!--
+  ~ jcaptcha, the open source java framework for captcha definition and integration
+  ~ copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <bean id="java.util.Locale.US"
+          class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+    <bean id="ratioUS"
+          class="java.lang.Float">
+        <constructor-arg index="0">
+            <value>0.2</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="java.util.Locale.FRANCE"
+          class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+
+    <bean id="ratioFR"
+          class="java.lang.Float">
+        <constructor-arg index="0">
+            <value>0.8</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="configuration"
+          class="com.octo.captcha.engine.bufferedengine.ContainerConfiguration">
+        <constructor-arg index="0">
+            <map>
+                <entry key-ref="java.util.Locale.US" value-ref="ratioUS"/>
+                <entry key-ref="java.util.Locale.FRANCE" value-ref="ratioFR"/>
+            </map>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>500</value>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <value>5000</value>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <value>30</value>
+        </constructor-arg>
+        <constructor-arg index="4">
+            <value>60</value>
+        </constructor-arg>
+    </bean>
+
+    <bean
+            class="com.octo.captcha.engine.bufferedengine.QuartzBufferedEngineContainer" id="container"
+            singleton="true">
+        <constructor-arg type="com.octo.captcha.engine.CaptchaEngine" index="0">
+            <ref bean="engine"/>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.engine.bufferedengine.buffer.CaptchaBuffer" index="1">
+            <ref bean="memBuffer"/>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.engine.bufferedengine.buffer.CaptchaBuffer" index="2">
+            <ref bean="diskBuffer"/>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.engine.bufferedengine.ContainerConfiguration" index="3">
+            <ref bean="configuration"/>
+        </constructor-arg>
+    </bean>
+
+    <bean
+            class="com.octo.captcha.engine.MockCaptchaEngine" id="engine">
+    </bean>
+
+    <bean
+            class="com.octo.captcha.engine.bufferedengine.buffer.MemoryCaptchaBuffer" id="memBuffer">
+    </bean>
+
+    <bean
+            class="com.octo.captcha.engine.bufferedengine.buffer.MemoryCaptchaBuffer" id="diskBuffer">
+
+    </bean>
+
+    <bean
+            class="org.springframework.scheduling.quartz.SchedulerFactoryBean"
+            id="quartz">
+        <property name="autoStartup">
+            <value>true</value>
+        </property>
+        <property name="waitForJobsToCompleteOnShutdown">
+            <value>true</value>
+        </property>
+
+        <property name="triggers">
+            <list>
+                <ref local="cronTriggerFeeder"/>
+                <ref local="cronTriggerSwapper"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="feederJobDetail"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="container"/>
+        </property>
+        <property name="targetMethod">
+            <value>feedPersistentBuffer</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+
+    <bean id="swapperJobDetail"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="container"/>
+        </property>
+        <property name="targetMethod">
+            <value>swapCaptchasFromPersistentToVolatileMemory</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+
+    <bean id="cronTriggerFeeder"
+          class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <!-- see the example of method invoking job above -->
+            <ref bean="feederJobDetail"/>
+        </property>
+        <property name="cronExpression">
+            <value>0/6 * * * * ?</value>
+        </property>
+    </bean>
+
+
+    <bean id="cronTriggerSwapper"
+          class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="swapperJobDetail"/>
+        </property>
+        <property name="cronExpression">
+            <value>0/3 * * * * ?</value>
+        </property>
+    </bean>
+
+</beans>

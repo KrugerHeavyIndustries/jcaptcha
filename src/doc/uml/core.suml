@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Classdiagram>
+  <settings>
+    <option name="layoutOnChanges" value="true" />
+    <option name="paintDepends" value="true" />
+    <option name="paintExtends" value="true" />
+    <option name="paintInner" value="true" />
+    <option name="paintUses" value="true" />
+    <option name="paintImplements" value="true" />
+  </settings>
+  <classes>
+    <class name="com.octo.captcha.sound.SoundCaptchaFactory" x="1178" y="232">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.image.ImageCaptchaFactory" x="482" y="222">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.CaptchaFactory" x="772" y="100">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.sound.gimpy.GimpySoundFactory" x="1043" y="364">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="true" />
+    </class>
+    <class name="com.octo.captcha.Captcha" x="2069" y="100">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="true" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.sound.SoundCaptcha" x="2256" y="292">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="true" />
+    </class>
+    <class name="com.octo.captcha.image.fisheye.FishEye" x="1992" y="439">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.image.ImageCaptcha" x="1825" y="292">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="true" />
+    </class>
+    <class name="com.octo.captcha.image.fisheye.FishEyeFactory" x="442" y="364">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="true" />
+    </class>
+    <class name="com.octo.captcha.image.gimpy.GimpyFactory" x="50" y="364">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="true" />
+    </class>
+    <class name="com.octo.captcha.image.gimpy.Gimpy" x="1780" y="439">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.sound.gimpy.GimpySound" x="2213" y="439">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="true" />
+    </class>
+  </classes>
+  <stickycomponents />
+  <textcomponents />
+  <connectors>
+    <connector from="com.octo.captcha.sound.gimpy.GimpySound" to="com.octo.captcha.sound.SoundCaptcha">
+      <anchor constraint="1" type="2" x="2396" y="439" />
+      <anchor constraint="1" type="2" x="2396" y="389" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.sound.gimpy.GimpySoundFactory" to="com.octo.captcha.sound.SoundCaptchaFactory">
+      <anchor constraint="1" type="2" x="1255" y="364" />
+      <anchor constraint="1" type="2" x="1255" y="314" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.image.ImageCaptcha" to="com.octo.captcha.Captcha">
+      <anchor constraint="1" type="2" x="2030" y="292" />
+      <anchor constraint="1" type="2" x="2093" y="242" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.image.fisheye.FishEyeFactory" to="com.octo.captcha.image.ImageCaptchaFactory">
+      <anchor constraint="1" type="2" x="671" y="364" />
+      <anchor constraint="1" type="2" x="604" y="304" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.image.gimpy.GimpyFactory" to="com.octo.captcha.image.ImageCaptchaFactory">
+      <anchor constraint="1" type="2" x="320" y="364" />
+      <anchor constraint="1" type="2" x="482" y="296" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.sound.SoundCaptchaFactory" to="com.octo.captcha.CaptchaFactory">
+      <anchor constraint="1" type="2" x="1178" y="247" />
+      <anchor constraint="1" type="2" x="952" y="171" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.image.ImageCaptchaFactory" to="com.octo.captcha.CaptchaFactory">
+      <anchor constraint="1" type="2" x="636" y="232" />
+      <anchor constraint="1" type="2" x="772" y="177" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.sound.SoundCaptcha" to="com.octo.captcha.Captcha">
+      <anchor constraint="1" type="2" x="2335" y="292" />
+      <anchor constraint="1" type="2" x="2271" y="242" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.image.fisheye.FishEye" to="com.octo.captcha.image.ImageCaptcha">
+      <anchor constraint="1" type="2" x="2050" y="439" />
+      <anchor constraint="1" type="2" x="2009" y="389" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.image.gimpy.Gimpy" to="com.octo.captcha.image.ImageCaptcha">
+      <anchor constraint="1" type="2" x="1893" y="439" />
+      <anchor constraint="1" type="2" x="1932" y="389" />
+      <decorator type="2" description="" />
+    </connector>
+  </connectors>
+</Classdiagram>
+

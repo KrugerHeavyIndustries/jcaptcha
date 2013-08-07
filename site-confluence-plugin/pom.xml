@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+<project>
+
+
+    <parent>
+        <groupId>com.atlassian.confluence.plugin.base</groupId>
+        <artifactId>confluence-plugin-base</artifactId>
+        <version>18</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.octo.captcha</groupId>
+    <artifactId>jcaptcha-site-confluence-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Plugin confluence for the community web site</name>
+    <packaging>atlassian-plugin</packaging>
+
+    <properties>
+        <atlassian.plugin.key>com.octo.captcha.site-confluence-plugin</atlassian.plugin.key>
+
+        <!-- Confluence version -->
+        <atlassian.product.version>2.9</atlassian.product.version>
+        <!-- Confluence plugin functional test library version -->
+        <atlassian.product.test-lib.version>1.4.1</atlassian.product.test-lib.version>
+        <!-- Confluence data version -->
+        <atlassian.product.data.version>2.9</atlassian.product.data.version>
+    </properties>
+
+
+  <!--parent>
+    <artifactId>jcaptcha-home</artifactId>
+    <groupId>com.octo.captcha</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.octo.captcha</groupId>
+  <artifactId>site-confluence-plugin</artifactId>
+  <name>Plugin confluence for the community web site</name>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+
+    <properties>
+        <atlassian.plugin.key>${groupId}.${artifactId}</atlassian.plugin.key>
+
+        <atlassian.product.version>2.9</atlassian.product.version>
+
+        <atlassian.product.test-lib.version>1.4.1</atlassian.product.test-lib.version>
+
+        <atlassian.product.data.version>2.9</atlassian.product.data.version>
+    </properties-->
+    
+
+    <dependencies>
+     <!-- Confluence dependencies -->
+
+    <dependency>
+      <groupId>com.octo.captcha</groupId>
+      <artifactId>jcaptcha</artifactId>
+      <version>1.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+ 
+
+
+ </dependencies>
+
+		<repositories>
+		  <repository>
+		    <id>m2proxy.atlassian.com</id>
+		    <name>m2proxy.atlassian.com</name>
+		    <url>https://m2proxy.atlassian.com/repository/public</url>
+		    <releases>
+		      <enabled>true</enabled>
+		    </releases>
+		    <snapshots>
+		      <enabled>false</enabled>
+		    </snapshots>
+		  </repository>
+		  
+		  <!-- repository>
+		    <id>repository.atlassian.com</id>
+		    <name>repository.atlassian.com</name>
+		    <url>http://repository.atlassian.com/maven2</url>
+		    <releases>
+		      <enabled>true</enabled>
+		    </releases>
+		    <snapshots>
+		      <enabled>false</enabled>
+		    </snapshots>
+		  </repository-->		  
+    </repositories>
+
+
+    
+</project>

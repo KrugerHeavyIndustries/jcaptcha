@@ -1,0 +1,19 @@
+~~
+~~  JCaptcha, the open source java framework for captcha definition and integration
+~~  Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+~~  See the LICENSE.txt file distributed with this package.
+~~  Copyright 2007 the original author or authors.
+~~  
+
+    ------
+    Integration Filter
+    ------
+    Antoine Véret
+    ------
+    March 27, 2008 
+
+JCaptcha Integration Filter
+
+  Provide a J2EE Filter designed to add image captchas to the entry forms of existing MVC web applications.
+  
+  <<{{{./apidocs/com/octo/captcha/module/filter/image/ImageCaptchaFilter.html}Get Started with the JavaDoc}}>> 

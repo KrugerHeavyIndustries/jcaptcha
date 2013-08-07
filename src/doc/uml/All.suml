@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Classdiagram>
+  <settings>
+    <option name="layoutOnChanges" value="true" />
+    <option name="paintDepends" value="true" />
+    <option name="paintExtends" value="true" />
+    <option name="paintInner" value="true" />
+    <option name="paintUses" value="true" />
+    <option name="paintImplements" value="true" />
+  </settings>
+  <classes>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.AbstractFontGenerator" x="144" y="551">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.SimpleWordToImage" x="402" y="334">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.fontgenerator.RandomFontGenerator" x="73" y="668">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.CaptchaFactory" x="715" y="551">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.PixCaptchaFactory" x="692" y="653">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.textpasters.SimpleTextPaster" x="50" y="1119">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordgenerators.DictionaryReader" x="539" y="1002">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordgenerators.RandomWordGenerator" x="1305" y="653">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.AbstractBackgroundGenerator" x="946" y="1002">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordgenerators.WordList" x="50" y="1351">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.WordGenerator" x="1224" y="551">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.fontgenerator.TwistedRandomFontGenerator" x="50" y="785">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.AbstractWordToImage" x="298" y="202">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.GimpyFactory" x="657" y="785">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.backgroundgenerators.GradientBackgroundGenerator" x="858" y="1119">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.AbstractTextPaster" x="108" y="1002">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.PixCaptcha" x="1514" y="1119">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordtoimages.ComposedWordToImage" x="50" y="334">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.Captcha" x="1515" y="1002">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.WordToImage" x="323" y="100">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordgenerators.DictionaryWordGenerator" x="1093" y="653">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.CaptchaException" x="258" y="1351">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+    <class name="com.octo.captcha.pix.gimpy.wordgenerators.FileDictionnary" x="517" y="1104">
+      <option name="fieldsExpanded" value="false" />
+      <option name="methodsExpanded" value="false" />
+      <option name="pinned" value="false" />
+      <option name="constructorsExpanded" value="false" />
+    </class>
+  </classes>
+  <stickycomponents />
+  <textcomponents />
+  <connectors>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.ComposedWordToImage" to="com.octo.captcha.pix.gimpy.wordtoimages.AbstractWordToImage">
+      <anchor constraint="1" type="2" x="246" y="334" />
+      <anchor constraint="1" type="2" x="314" y="284" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.SimpleWordToImage" to="com.octo.captcha.pix.gimpy.wordtoimages.AbstractWordToImage">
+      <anchor constraint="1" type="2" x="495" y="334" />
+      <anchor constraint="1" type="2" x="427" y="284" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordgenerators.DictionaryWordGenerator" to="com.octo.captcha.pix.gimpy.WordGenerator">
+      <anchor constraint="1" type="2" x="1210" y="653" />
+      <anchor constraint="1" type="2" x="1254" y="603" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.ComposedWordToImage" to="com.octo.captcha.pix.gimpy.wordtoimages.AbstractTextPaster">
+      <anchor constraint="1" type="2" x="199" y="401" />
+      <anchor constraint="1" type="2" x="173" y="1002" />
+      <decorator type="4" description="-  textPaster" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.fontgenerator.RandomFontGenerator" to="com.octo.captcha.pix.gimpy.wordtoimages.AbstractFontGenerator">
+      <anchor constraint="1" type="2" x="219" y="668" />
+      <anchor constraint="1" type="2" x="219" y="618" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordgenerators.RandomWordGenerator" to="com.octo.captcha.pix.gimpy.WordGenerator">
+      <anchor constraint="1" type="2" x="1344" y="653" />
+      <anchor constraint="1" type="2" x="1300" y="603" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordgenerators.DictionaryWordGenerator" to="com.octo.captcha.pix.gimpy.wordgenerators.DictionaryReader">
+      <anchor constraint="1" type="2" x="1103" y="735" />
+      <anchor constraint="1" type="2" x="641" y="1002" />
+      <decorator type="4" description="-  factory" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordgenerators.FileDictionnary" to="com.octo.captcha.pix.gimpy.wordgenerators.DictionaryReader">
+      <anchor constraint="1" type="2" x="597" y="1104" />
+      <anchor constraint="1" type="2" x="597" y="1054" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.backgroundgenerators.GradientBackgroundGenerator" to="com.octo.captcha.pix.gimpy.wordtoimages.AbstractBackgroundGenerator">
+      <anchor constraint="1" type="2" x="1043" y="1119" />
+      <anchor constraint="1" type="2" x="1043" y="1069" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.AbstractWordToImage" to="com.octo.captcha.pix.gimpy.WordToImage">
+      <anchor constraint="1" type="2" x="371" y="202" />
+      <anchor constraint="1" type="2" x="371" y="152" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.ComposedWordToImage" to="com.octo.captcha.pix.gimpy.wordtoimages.AbstractBackgroundGenerator">
+      <anchor constraint="1" type="2" x="243" y="401" />
+      <anchor constraint="1" type="2" x="1001" y="1002" />
+      <decorator type="4" description="-  background" />
+    </connector>
+    <connector from="com.octo.captcha.pix.PixCaptchaFactory" to="com.octo.captcha.CaptchaFactory">
+      <anchor constraint="1" type="2" x="769" y="653" />
+      <anchor constraint="1" type="2" x="769" y="603" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.GimpyFactory" to="com.octo.captcha.pix.gimpy.WordToImage">
+      <anchor constraint="1" type="2" x="750" y="785" />
+      <anchor constraint="1" type="2" x="385" y="152" />
+      <decorator type="4" description="-  wordToImage" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.ComposedWordToImage" to="com.octo.captcha.pix.gimpy.wordtoimages.AbstractFontGenerator">
+      <anchor constraint="1" type="2" x="203" y="401" />
+      <anchor constraint="1" type="2" x="216" y="551" />
+      <decorator type="4" description="-  fontGenerator" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.fontgenerator.TwistedRandomFontGenerator" to="com.octo.captcha.pix.gimpy.wordtoimages.fontgenerator.RandomFontGenerator">
+      <anchor constraint="1" type="2" x="219" y="785" />
+      <anchor constraint="1" type="2" x="219" y="735" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordtoimages.textpasters.SimpleTextPaster" to="com.octo.captcha.pix.gimpy.wordtoimages.AbstractTextPaster">
+      <anchor constraint="1" type="2" x="172" y="1119" />
+      <anchor constraint="1" type="2" x="172" y="1069" />
+      <decorator type="2" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.GimpyFactory" to="com.octo.captcha.pix.gimpy.WordGenerator">
+      <anchor constraint="1" type="2" x="838" y="785" />
+      <anchor constraint="1" type="2" x="1224" y="602" />
+      <decorator type="4" description="-  wordGenerator" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.wordgenerators.DictionaryWordGenerator" to="com.octo.captcha.pix.gimpy.wordgenerators.WordList">
+      <anchor constraint="1" type="2" x="1109" y="735" />
+      <anchor constraint="1" type="2" x="122" y="1361" />
+      <decorator type="4" description="-  words" />
+    </connector>
+    <connector from="com.octo.captcha.pix.PixCaptcha" to="com.octo.captcha.Captcha">
+      <anchor constraint="1" type="2" x="1574" y="1119" />
+      <anchor constraint="1" type="2" x="1574" y="1069" />
+      <decorator type="1" description="" />
+    </connector>
+    <connector from="com.octo.captcha.pix.gimpy.GimpyFactory" to="com.octo.captcha.pix.PixCaptchaFactory">
+      <anchor constraint="1" type="2" x="769" y="785" />
+      <anchor constraint="1" type="2" x="769" y="735" />
+      <decorator type="2" description="" />
+    </connector>
+  </connectors>
+</Classdiagram>
+

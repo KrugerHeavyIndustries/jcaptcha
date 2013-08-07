@@ -1,0 +1,26 @@
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+
+<HTML>
+<HEAD>
+    <TITLE>JCAPTCHA</TITLE>
+</HEAD>
+
+<BODY>
+This is the base package for JCAPTCHAs.</br>
+It defines two main interfaces :
+<ul>
+    <li>Captcha : the container for challenge, built by a CaptchaFactory, which contains the challenge object (a pix or
+        a sound or whatever),
+        the string question, and has the ability to validate a string answer</li>
+    <li>CaptchaFactory : the factory for Captchas :),which have the responsability to build captchas from their
+        constructor passing them builded questions and challenges.
+        Factories are built using the captcha components. (see the component sub package)</li>
+</ul>
+
+<img src="./doc-files/captcha.jpg"/>
+</body>
+</html>

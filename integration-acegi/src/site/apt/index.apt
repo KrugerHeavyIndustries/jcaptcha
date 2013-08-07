@@ -1,0 +1,25 @@
+~~
+~~  JCaptcha, the open source java framework for captcha definition and integration
+~~  Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+~~  See the LICENSE.txt file distributed with this package.
+~~  Copyright 2007 the original author or authors.
+~~  
+
+    ------
+    Integration Acegi Security
+    ------
+    Antoine Véret
+    ------
+    March 27, 2008 
+
+JCaptcha Integration Acegi Security
+
+  Provide Helper classes in order to use JCaptcha with {{{http://www.acegisecurity.org}AcegiSecurity}} framework.
+  
+  * ServiceProxy implementation
+   
+  * Image and Sound Controllers   
+  
+  []
+
+  <<{{{http://forge.octo.com/jcaptcha/confluence/}Get Started with the Wiki documentation}}>> 

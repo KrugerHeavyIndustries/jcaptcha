@@ -1,0 +1,19 @@
+~~
+~~  JCaptcha, the open source java framework for captcha definition and integration
+~~  Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+~~  See the LICENSE.txt file distributed with this package.
+~~  Copyright 2007 the original author or authors.
+~~  
+
+    ------
+    Extension EHCache Store
+    ------
+    Antoine Véret
+    ------
+    March 27, 2008 
+
+JCaptcha Extension EHCache Store
+
+  This extension provide an {{{http://ehcache.sourceforge.net}EHCache}} implementation for storing captcha between web page rendering and challenge validation. 
+  
+  It can be used instead of the default FastHashMapCaptchaStore. 

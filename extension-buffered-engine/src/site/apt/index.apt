@@ -1,0 +1,21 @@
+~~
+~~  JCaptcha, the open source java framework for captcha definition and integration
+~~  Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+~~  See the LICENSE.txt file distributed with this package.
+~~  Copyright 2007 the original author or authors.
+~~  
+
+    ------
+    Extension Buffered Engine
+    ------
+    Antoine Véret
+    ------
+    March 27, 2008 
+
+JCaptcha Extension Buffered Engine
+
+  This extension provide a BufferedCaptchaEngine allowing to save the time required to generate the web page. 
+  
+  Captcha are stored in buffers in order to speed up the web page rendering.
+  
+  <<{{{http://forge.octo.com/jcaptcha/confluence/display/general/Captcha+Buffering+System}Get Started with the Wiki documentation}}>>

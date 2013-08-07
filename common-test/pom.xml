@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+<project>
+  <parent>
+    <artifactId>jcaptcha-home</artifactId>
+    <groupId>com.octo.captcha</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.octo.captcha</groupId>
+  <artifactId>jcaptcha-common-test</artifactId>
+  <name>Common test</name>
+  <version>1.0</version>
+  <dependencies>
+    <dependency>
+      <groupId>com.octo.captcha</groupId>
+      <artifactId>jcaptcha-api</artifactId>
+      <version>1.0</version>
+    </dependency>  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>      
+    </dependency>	  
+  </dependencies>
+</project>

@@ -1,0 +1,36 @@
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+<assembly>
+  <id>all</id>
+  <formats>
+    <format>jar</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory></outputDirectory>
+      <outputFileNameMapping></outputFileNameMapping>
+      <unpack>true</unpack>
+      <includes>
+        <include>com.octo.captcha:jcaptcha-api</include>
+        <include>com.jhlabs:imaging</include>
+      </includes>
+    </dependencySet>
+  </dependencySets>
+  <fileSets>
+    <fileSet>
+      <directory>target/classes</directory>
+      <outputDirectory></outputDirectory>
+    </fileSet>
+    <fileSet>
+      <directory>${basedir}</directory>
+      <outputDirectory></outputDirectory>
+      <includes>
+        <include>LICENSE.txt</include>
+      </includes>
+    </fileSet>    
+  </fileSets>
+</assembly>

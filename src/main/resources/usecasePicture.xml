@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+
+<!--
+  ~ jcaptcha, the open source java framework for captcha definition and integration
+  ~ copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- ==========================================================================
+*     SPRING BEAN DEFINITION FILE
+*     Javaworld Article - Simple Sequence Workflow Example
+  ========================================================================== -->
+<beans>
+
+
+    <bean id="colorGenRandom" class="com.octo.captcha.component.image.color.RandomRangeColorGenerator">
+        <constructor-arg index="0">
+            <list>
+                <value>50</value>
+                <value>200</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <list>
+                <value>50</value>
+                <value>200</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <list>
+                <value>50</value>
+                <value>200</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <list>
+                <value>200</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="colorGenRandomBlue2" class="com.octo.captcha.component.image.color.RandomRangeColorGenerator">
+        <constructor-arg index="0">
+            <list>
+                <value>20</value>
+                <value>150</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <list>
+                <value>90</value>
+                <value>150</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <list>
+                <value>180</value>
+                <value>220</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <list>
+                <value>100</value>
+                <value>130</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="path" class="java.lang.String">
+        <constructor-arg>
+            <value>C:\DEV\PROJETS\jCaptcha\jcaptcha\engine\src\conf\gimpybackgrounds</value>
+        </constructor-arg>
+
+    </bean>
+
+    <bean id="fontGen1" class="com.octo.captcha.component.image.fontgenerator.TwistedAndShearedRandomFontGenerator">
+        <constructor-arg index="0">
+            <value>40</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>40</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="fontGen2" class="com.octo.captcha.component.image.fontgenerator.TwistedAndShearedRandomFontGenerator">
+        <constructor-arg index="0">
+            <value>30</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>50</value>
+        </constructor-arg>
+
+    </bean>
+
+    <bean id="filter2" class="com.octo.captcha.component.image.backgroundgenerator.FileReaderRandomBackgroundGenerator">
+        <constructor-arg index="0">
+            <value>200</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>100</value>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <ref bean="path"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="filter3" class="com.octo.captcha.component.image.textpaster.BaffleRandomTextPaster">
+        <constructor-arg type="java.lang.Integer" index="0">
+            <value>6</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.Integer" index="1">
+            <value>8</value>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.component.image.color.ColorGenerator" index="2">
+            <ref bean="colorGenRandom"/>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <value>true</value>
+        </constructor-arg>
+        <constructor-arg index="4">
+            <value>1</value>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.component.image.color.ColorGenerator" index="5">
+            <ref bean="colorGenRandom"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="wordtoimage" class="com.octo.captcha.component.image.wordtoimage.ComposedWordToImage">
+        <constructor-arg>
+            <ref bean="fontGen1"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="filter2"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="filter3"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="wordtoimage2" class="com.octo.captcha.component.image.wordtoimage.ComposedWordToImage">
+        <constructor-arg>
+            <ref bean="fontGen2"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="filter2"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="filter3"/>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="filedict" class="com.octo.captcha.component.word.FileDictionary">
+        <constructor-arg index="0">
+            <value>toddlist</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="wordgen" class="com.octo.captcha.component.word.wordgenerator.DictionaryWordGenerator">
+        <constructor-arg>
+            <ref bean="filedict"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="factory" class="com.octo.captcha.image.gimpy.GimpyFactory">
+        <constructor-arg>
+            <ref bean="wordgen"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="wordtoimage"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="factory2" class="com.octo.captcha.image.gimpy.GimpyFactory">
+        <constructor-arg>
+            <ref bean="wordgen"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="wordtoimage2"/>
+        </constructor-arg>
+    </bean>
+
+</beans>
+

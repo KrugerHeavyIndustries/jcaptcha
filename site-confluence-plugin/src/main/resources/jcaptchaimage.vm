@@ -1,0 +1,13 @@
+<img style="border-width: 1px;" src="#if(${req})$req.getContextPath()#end/plugins/servlet/jcaptchaimage?config=$configHash&1"/>
+<img style="border-width: 1px;" src="#if(${req})$req.getContextPath()#end/plugins/servlet/jcaptchaimage?config=$configHash&2"/>
+<img style="border-width: 1px;" src="#if(${req})$req.getContextPath()#end/plugins/servlet/jcaptchaimage?config=$configHash&3"/>
+
+<br/>
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-xml">
+$config
+</pre>
+</div>
+</div>
+

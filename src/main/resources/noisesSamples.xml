@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+
+<!--
+  ~ jcaptcha, the open source java framework for captcha definition and integration
+  ~ copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- ==========================================================================
+*     SPRING BEAN DEFINITION FILE
+*     Javaworld Article - Simple Sequence Workflow Example
+  ========================================================================== -->
+<beans>
+
+    <bean id="java.util.Locale.US"
+          class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+
+
+    <bean id="white" class="java.awt.Color">
+        <constructor-arg type="int" index="0">
+            <value>255</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="1">
+            <value>255</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="2">
+            <value>255</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="black" class="java.awt.Color">
+        <constructor-arg type="int" index="0">
+            <value>0</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="1">
+            <value>0</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="2">
+            <value>0</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="blue" class="java.awt.Color">
+        <constructor-arg type="int" index="0">
+            <value>0</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="1">
+            <value>0</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="2">
+            <value>255</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="closeBlue" class="java.awt.Color">
+        <constructor-arg type="int" index="0">
+            <value>0</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="1">
+            <value>0</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="2">
+            <value>255</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="3">
+            <value>200</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="red" class="java.awt.Color">
+        <constructor-arg index="0">
+            <value>240</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>39</value>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <value>56</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="green" class="java.awt.Color">
+        <constructor-arg type="int" index="0">
+            <value>0</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="1">
+            <value>240</value>
+        </constructor-arg>
+        <constructor-arg type="int" index="2">
+            <value>0</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="colorGen1" class="com.octo.captcha.component.image.color.SingleColorGenerator">
+        <constructor-arg index="0">
+            <ref bean="white"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="colorGen2" class="com.octo.captcha.component.image.color.SingleColorGenerator">
+        <constructor-arg index="0">
+            <ref bean="closeBlue"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="colorGen3" class="com.octo.captcha.component.image.color.SingleColorGenerator">
+        <constructor-arg index="0">
+            <ref bean="blue"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="colorGen4" class="com.octo.captcha.component.image.color.SingleColorGenerator">
+        <constructor-arg index="0">
+            <ref bean="green"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="colorGenRandomBlue" class="com.octo.captcha.component.image.color.RandomRangeColorGenerator">
+        <constructor-arg index="0">
+            <list>
+                <value>150</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <list>
+                <value>0</value>
+                <value>50</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <list>
+                <value>200</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <list>
+                <value>255</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="colorGenRandomBlue2" class="com.octo.captcha.component.image.color.RandomRangeColorGenerator">
+        <constructor-arg index="0">
+            <list>
+                <value>50</value>
+                <value>150</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <list>
+                <value>50</value>
+                <value>150</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <list>
+                <value>150</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <list>
+                <value>255</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="singleColorWhite" class="com.octo.captcha.component.image.color.RandomRangeColorGenerator">
+        <constructor-arg index="0">
+            <list>
+                <value>255</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <list>
+                <value>255</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <list>
+                <value>255</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <list>
+                <value>255</value>
+                <value>255</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="fontgenTwistSheared"
+          class="com.octo.captcha.component.image.fontgenerator.TwistedAndShearedRandomFontGenerator">
+        <constructor-arg index="0">
+            <value>30</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>60</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="fontgenTwist" class="com.octo.captcha.component.image.fontgenerator.TwistedRandomFontGenerator">
+        <constructor-arg index="0">
+            <value>30</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>60</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="fontgenDefromed" class="com.octo.captcha.component.image.fontgenerator.DeformedRandomFontGenerator">
+        <constructor-arg index="0">
+            <value>30</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>60</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="filter2" class="com.octo.captcha.component.image.backgroundgenerator.UniColorBackgroundGenerator">
+        <constructor-arg index="0">
+            <value>250</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>100</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="bafflePaster" class="com.octo.captcha.component.image.textpaster.BaffleRandomTextPaster">
+        <constructor-arg type="java.lang.Integer" index="0">
+            <value>6</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.Integer" index="1">
+            <value>8</value>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.component.image.color.ColorGenerator" index="2">
+            <ref bean="colorGenRandomBlue"/>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <value>true</value>
+        </constructor-arg>
+        <constructor-arg index="4">
+            <value>2</value>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.component.image.color.ColorGenerator" index="5">
+            <ref bean="singleColorWhite"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="LinePaster" class="com.octo.captcha.component.image.textpaster.LineRandomTextPaster">
+        <constructor-arg type="java.lang.Integer" index="0">
+            <value>6</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.Integer" index="1">
+            <value>8</value>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.component.image.color.ColorGenerator" index="2">
+            <ref bean="colorGenRandomBlue"/>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <value>true</value>
+        </constructor-arg>
+        <constructor-arg index="4">
+            <value>3</value>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.component.image.color.ColorGenerator" index="5">
+            <ref bean="colorGenRandomBlue2"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="SimplePaster" class="com.octo.captcha.component.image.textpaster.SimpleTextPaster">
+        <constructor-arg type="java.lang.Integer" index="0">
+            <value>6</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.Integer" index="1">
+            <value>8</value>
+        </constructor-arg>
+        <constructor-arg type="com.octo.captcha.component.image.color.ColorGenerator" index="2">
+            <ref bean="colorGenRandomBlue"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="wordtoimageDeformed" class="com.octo.captcha.component.image.wordtoimage.ComposedWordToImage">
+        <constructor-arg>
+            <ref bean="fontgenDefromed"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="filter2"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="SimplePaster"/>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="wordtoimageTwistBaffle" class="com.octo.captcha.component.image.wordtoimage.ComposedWordToImage">
+        <constructor-arg>
+            <ref bean="fontgenTwist"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="filter2"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="bafflePaster"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="wordtoimageShearLine" class="com.octo.captcha.component.image.wordtoimage.ComposedWordToImage">
+        <constructor-arg>
+            <ref bean="fontgenTwistSheared"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="filter2"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="LinePaster"/>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="filedict" class="com.octo.captcha.component.word.FileDictionary">
+        <constructor-arg index="0">
+            <value>toddlist</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="wordgen" class="com.octo.captcha.component.word.wordgenerator.DictionaryWordGenerator">
+        <constructor-arg>
+            <ref bean="filedict"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="deformed" class="com.octo.captcha.image.gimpy.GimpyFactory">
+        <constructor-arg>
+            <ref bean="wordgen"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="wordtoimageDeformed"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="twistBaffle" class="com.octo.captcha.image.gimpy.GimpyFactory">
+        <constructor-arg>
+            <ref bean="wordgen"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="wordtoimageTwistBaffle"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="twistShearLine" class="com.octo.captcha.image.gimpy.GimpyFactory">
+        <constructor-arg>
+            <ref bean="wordgen"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="wordtoimageShearLine"/>
+        </constructor-arg>
+    </bean>
+
+</beans>
+

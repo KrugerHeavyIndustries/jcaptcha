@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+
+<project name="JCaptcha">
+  <bannerLeft>
+    <name>JCaptcha</name>
+    <src>images/jcaptcha-logo.jpg</src>
+    <href>http://www.jcaptcha.net</href>
+  </bannerLeft>
+  <!-- bannerRight>
+    <src>images/maven-small.gif</src>
+  </bannerRight -->
+  <publishDate format="dd MMM yyyy" position="left"/>
+  <version position="left"/>
+  <skin>
+    <groupId>com.octo.captcha</groupId>
+    <artifactId>jcaptcha-site-skin</artifactId>
+    <version>1.0</version>
+  </skin>  
+  <body>
+    <head>
+      <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-3856069-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+      </script>      
+    </head>  
+    <links>
+      <item name="OCTO Technology" href="http://www.octo.com" />
+    </links>
+    <menu name="Overview" >
+      <item name="Introduction" href="index.html"/>
+      <item name="Download" href="http://sourceforge.net/project/showfiles.php?group_id=97877"/>
+      <item name="Wiki Documentation" href="http://forge.octo.com/jcaptcha/confluence"/>
+      <item name="Issue tracker" href="http://forge.octo.com/jcaptcha/jira"/>
+      <item name="Sourceforge site" href="http://sourceforge.net/projects/jcaptcha"/>
+      <item name="Browse source" href="http://fisheye3.cenqua.com/browse/jcaptcha"/>   
+      <item name="Mailing lists" href="mail-lists.html"/>
+      <item name="Project Team" href="team-list.html"/>
+      <item name="Thanks" href="thanks.html"/>
+    </menu>
+    <menu ref="modules"/>
+    <menu ref="parent"/>
+    <menu ref="reports"/>
+  </body>
+</project>

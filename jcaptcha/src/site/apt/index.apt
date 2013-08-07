@@ -1,0 +1,57 @@
+~~
+~~  JCaptcha, the open source java framework for captcha definition and integration
+~~  Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+~~  See the LICENSE.txt file distributed with this package.
+~~  Copyright 2007 the original author or authors.
+~~  
+
+    ------
+    Purpose
+    ------
+    Antoine Véret
+    ------
+    April 3, 2008 
+
+JCaptcha Core Module 
+
+  This is the core module of the JCaptcha framework.
+  
+  It contains :
+  
+    * Captcha implementations
+        
+      * Text : Captcha with Text chalenges
+                  
+      * Image : Captcha with Image chalenges
+            
+      * Sound : Captcha with Sound chalenges
+            
+    * Standardized layer
+        
+      * Service : Used by client applications to expose Captchas Challenge and validate the response in an easy way
+            
+      * Engine : Used internally by Services in order to provide new captchas
+            
+    * Some usefull components
+        
+      * Generators (Random or specialized)
+            
+        * Background
+                
+        * Color
+                
+        * Word
+                
+        * Font
+                
+      * Image deformation
+            
+      * Text Paster
+            
+      * Sound Configurator
+            
+      * Word Decorator
+  
+    []
+  
+  For more explanations please to refer to the <<{{{./apidocs/index.html}JavaDoc API documentation}}>> 

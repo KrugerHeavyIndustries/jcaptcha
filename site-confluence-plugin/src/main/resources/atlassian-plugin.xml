@@ -1,0 +1,17 @@
+<atlassian-plugin key="jcaptchaimage" name="site-confluence-plugin">
+    <plugin-info>
+      <description>Plugin that generates an image captcha</description>
+        <version>1.0-SNAPSHOT</version>
+         <vendor name="JCaptcha" url="http://jcaptcha.net"/>
+    </plugin-info>
+
+    <servlet name='jcaptcha image servlet' key='jcaptcha-image-servlet' class='com.octo.captcha.confluence.JcaptchaImageServlet'>
+        <description>Servlet that generates a captcha</description>
+        <url-pattern>/jcaptchaimage</url-pattern>
+    </servlet>
+
+     <macro name='jcaptcha-image' class='com.octo.captcha.confluence.JcaptchaImageMacro' key='jcaptcha-image-macro'>
+            <description>Servlet that holds a specific image captcha configuration</description>
+    </macro>
+
+</atlassian-plugin>

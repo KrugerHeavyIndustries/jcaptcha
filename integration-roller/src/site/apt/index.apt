@@ -1,0 +1,19 @@
+~~
+~~  JCaptcha, the open source java framework for captcha definition and integration
+~~  Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+~~  See the LICENSE.txt file distributed with this package.
+~~  Copyright 2007 the original author or authors.
+~~  
+
+    ------
+    Integration Roller
+    ------
+    Antoine Véret
+    ------
+    March 27, 2008 
+
+JCaptcha Integration Roller
+
+  Provide integration with a Roller Weblogger (With version 0.9.9.5, not updated with newest version of Roller)
+  
+  <<{{{http://forge.octo.com/jcaptcha/confluence/display/general/JRoller+installation}Get Started with the Wiki documentation}}>> 

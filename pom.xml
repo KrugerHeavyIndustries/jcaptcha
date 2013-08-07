@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+		
+		<groupId>com.octo.captcha</groupId>
+    <artifactId>jcaptcha-home</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <name>JCaptcha Home</name>
+    <url>http://www.jcaptcha.net/</url>
+    
+    <modules>
+      <module>site-skin</module>
+      <module>api</module>    
+      <module>common-test</module>
+      <module>jcaptcha</module>
+      <module>testing</module>      
+	  <!-- module>site-confluence-plugin</module -->    
+      <module>extension-ehcache-store</module>
+      <module>extension-jbosscache-store</module>
+      <module>extension-buffered-engine</module>
+      <module>extension-sound-freetts</module>
+      <module>integration-acegi</module>
+		<module>integration-filter</module>
+		<module>integration-struts</module>
+		<module>integration-roller</module>    
+  </modules>
+  	    
+    <organization>
+        <name>JCaptcha corp.</name>
+        <url>http://www.jcaptcha.net/</url>
+    </organization>
+    
+    <inceptionYear>2003</inceptionYear>
+    
+    <licenses>
+		  <license>
+		    <name>LGPL v2.1</name>
+		    <url>http://www.gnu.org/licenses/lgpl-2.1.txt</url>
+		  </license>
+		</licenses>
+		
+	  <issueManagement>
+	    <system>Jira</system>
+	    <url>http://forge.octo.com/jcaptcha/jira</url>
+	  </issueManagement>
+	  
+		<repositories>
+		  <repository>
+		    <id>3rd-party</id>
+		    <name>Repository for 3rd-party artifacts</name>
+		    <url>http://forge.octo.com/archiva/repository/3rd-party</url>
+		    <releases>
+		      <enabled>true</enabled>
+		    </releases>
+		    <snapshots>
+		      <enabled>false</enabled>
+		    </snapshots>
+		  </repository>
+    </repositories>
+	  
+	  <scm>
+	    <connection>scm:svn:https://jcaptcha.svn.sourceforge.net/svnroot/jcaptcha/trunk</connection>
+	    <url>http://jcaptcha.svn.sourceforge.net/viewvc/jcaptcha/</url>
+	  </scm>
+		
+	  <ciManagement>
+	    <system>Hudson</system>
+	    <url>https://forge.octo.com/hudson/job/JCaptcha/</url>
+	  </ciManagement>
+	  
+	  <distributionManagement>
+			<downloadUrl>http://sourceforge.net/projects/jcaptcha/</downloadUrl>        
+      <site>
+        <url>${siteDeployURL}</url>
+      </site>
+      <snapshotRepository>
+        <id>archiva.forge.octo.com</id>
+        <name>OCTO Forge Snapshot repository</name>
+        <url>dav:http://forge.octo.com/archiva/repository/forge-snapshots</url>
+      </snapshotRepository>
+    </distributionManagement>
+	  
+		<mailingLists>
+        <mailingList>
+            <name>JCaptcha User List</name>
+            <post>jcaptcha-users@lists.sourceforge.net</post>
+            <subscribe>https://lists.sourceforge.net/lists/listinfo/jcaptcha-users</subscribe>
+            <unsubscribe>https://lists.sourceforge.net/lists/listinfo/jcaptcha-users</unsubscribe>
+            <archive>http://sourceforge.net/mailarchive/forum.php?forum=jcaptcha-users</archive>
+        </mailingList>
+    </mailingLists>
+  
+	  <developers>
+     	<developer>
+	      <id>averet</id>
+	      <name>Antoine Veret</name>
+	      <email>antoine.veret@gmail.com</email>
+	      <organization>OCTO Technology</organization>
+	      <organizationUrl>www.octo.com</organizationUrl>
+	      <roles>
+	      	<role>Project Leader</role>
+	        <role>Developer</role>
+	      </roles>
+	    </developer>
+      <developer>
+          <name>Marc-Antoine Garrigue</name>
+          <id>magarrigue</id>
+          <email>magarrigue@octo.com</email>
+          <organization>OCTO Technology</organization>
+          <organizationUrl>www.octo.com</organizationUrl>
+          <roles>
+              <role>Developer</role>
+          </roles>
+      </developer>
+      <developer>
+          <name>Sebastien Brunot</name>
+          <id>sbrunot</id>
+          <roles>
+              <role>Developer</role>
+          </roles>
+      </developer>
+      <developer>
+          <name>Mathieu Gandin</name>
+          <id>mgandin</id>
+          <organization>OCTO Technology</organization>
+          <organizationUrl>www.octo.com</organizationUrl>
+          <roles>
+              <role>Developer</role>
+          </roles>
+      </developer>
+      <developer>
+          <name>Benoit Doumas</name>
+          <id>mdoumas</id>
+          <roles>
+              <role>Developer</role>
+          </roles>
+      </developer>
+    </developers>
+    
+    <contributors>
+        <contributor>
+            <name>Richard Hull</name>
+            <organization>orange-ftgroup</organization>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </contributor>
+    </contributors>
+    
+    <reporting>
+        <plugins>
+        
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <reportSets>
+               <reportSet>
+                  <configuration>
+                     <doclet>gr.spinellis.umlgraph.doclet.UmlGraphDoc</doclet>
+                     <docletArtifact>
+                       <groupId>gr.spinellis</groupId>
+                       <artifactId>UmlGraph</artifactId>
+                       <version>4.6</version>
+                     </docletArtifact>
+                     <additionalparam>
+                            -inferrel -inferdep -quiet -hide java.* -collpackages java.util.* -qualify
+                            -postfixpackage -nodefontsize 9
+                            -nodefontpackagesize 7 -views
+                     </additionalparam>
+                  </configuration>
+                  <reports>
+                     <report>javadoc</report>
+                  </reports>
+               </reportSet>
+            </reportSets>
+          </plugin>
+          
+          <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-checkstyle-plugin</artifactId>
+             <configuration>
+                  <linkXref>on</linkXref>
+              </configuration>
+          </plugin>
+        
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>surefire-report-maven-plugin</artifactId>
+          </plugin>
+          
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-doap-plugin</artifactId>
+            <configuration>
+              <category>security</category>
+              <language>Java</language>
+            </configuration>
+          </plugin>
+
+		      <plugin>
+		      	<groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-clover-plugin</artifactId>
+		        <configuration>
+		          <licenseLocation>${clover.licenseLocation}</licenseLocation>
+		        </configuration>
+		      </plugin>
+		      
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>findbugs-maven-plugin</artifactId>
+          </plugin>
+         
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>taglist-maven-plugin</artifactId>
+          </plugin>
+          
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>jxr-maven-plugin</artifactId>
+          </plugin>
+          
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-pmd-plugin</artifactId>
+              <inherited>true</inherited>
+              <configuration>
+                  <configLocation>pmd.xml</configLocation>
+                  <linkXref>true</linkXref>
+                  <sourceEncoding>utf-8</sourceEncoding>
+                  <minimumTokens>50</minimumTokens>
+                  <targetJdk>1.3</targetJdk>
+                  <includeTests>true</includeTests>
+              </configuration>  
+          </plugin>
+            
+        </plugins>
+    </reporting>
+    
+    <build>
+      <pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.4.3</version>
+          </plugin>
+        </plugins>
+      </pluginManagement>    
+	    <plugins>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-compiler-plugin</artifactId>
+	        <configuration>
+	          <source>1.3</source>
+	          <target>1.3</target>
+            <verbose>false</verbose>
+            <fork>true</fork>
+            <executable>${JDK4_HOME}/bin/javac</executable>
+            <compilerVersion>1.3</compilerVersion>	          
+	        </configuration>
+	      </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <inherited>true</inherited>
+            <configuration>
+                <forkMode>once</forkMode>
+                <argLine>-Xms128m -Xmx256m -XX:MaxPermSize=256m</argLine>
+           </configuration>
+        </plugin>	      
+		    <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-clover-plugin</artifactId>
+	        <executions>
+	          <execution>
+	          	<phase>pre-site</phase>
+	            <goals>
+	              <goal>instrument</goal>
+	            </goals>
+	          </execution>
+	        </executions>
+	      </plugin>	
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <configuration>
+            <descriptors>
+              <descriptor>src/assembly/bin.xml</descriptor>
+            </descriptors>
+            <finalName>jcaptcha-${project.version}</finalName>
+          </configuration>
+        </plugin>	            
+	    </plugins>	    
+	  </build>
+    
+</project>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+  ~ JCaptcha, the open source java framework for captcha definition and integration
+  ~ Copyright (c)  2007 jcaptcha.net. All Rights Reserved.
+  ~ See the LICENSE.txt file distributed with this package.
+  -->
+
+<document>
+
+    <meta name="keyword" content="captcha,java,jcaptcha"/>
+
+    <body>
+
+        <section name="Many thanks from the jcaptcha team to :">
+								
+								<ul>
+                    <li><img src="http://www.octo.com/images/logo1.gif"/>
+                      <a href="http://www.octo.com">OCTO Technology</a> which is our financial and technical main support!</li>
+                    <li>The <a href="http://www.captcha.net">captcha.net</a> Team for their research</li>
+                    
+                    <li>Jerry Huxtable <a href="http://www.jhlabs.com"> from JH Labs </a>for his fantastic filter library</li>
+                    
+                    <li>Lyonel Thouvenot for the jcaptcha logo</li>
+                    
+                    <li>All jcaptcha users for their participation and feed back</li>
+                    
+                    <li>The <a href="http://www.ossgtp.org/">OSSGTP</a>for its support</li>
+                    
+                    <li>
+                      <img style="height: 33px;" src="http://www.jetbrains.com/img/logo.gif" />
+								      <a href="http://www.jetbrains.com/"> JetBrains software</a> for supporting OSS!
+                    </li>
+                    
+                    <li>
+                      <img style="height: 33px;" src="http://www.atlassian.com/images/atlassian_logo_man2.gif"/>
+                      <a href="http://atlassian.com/">Atlassian software</a> for supporting OSS!
+                    </li>
+               </ul>
+        </section>
+
+    </body>
+</document>

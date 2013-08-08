@@ -7,11 +7,7 @@
 package com.octo.captcha.image;
 
 import com.octo.captcha.Captcha;
-import com.sun.image.codec.jpeg.ImageFormatException;
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageDecoder;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
-
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
@@ -93,9 +89,7 @@ public abstract class ImageCaptcha implements Captcha {
         // If the challenge has not been disposed
         if (this.challenge != null) {
             // use jpeg encoding
-            JPEGImageEncoder jpegEncoder =
-                    JPEGCodec.createJPEGEncoder(out);
-            jpegEncoder.encode(this.challenge);
+            ImageIO.write(this.challenge, "jpg", out);
         }
     }
 
@@ -110,16 +104,6 @@ public abstract class ImageCaptcha implements Captcha {
 
         // UnSerialize captcha fields with default method
         in.defaultReadObject();
-        
-        try {
-            JPEGImageDecoder decoder = JPEGCodec.createJPEGDecoder(in);
-            this.challenge = decoder.decodeAsBufferedImage();
-        } catch (ImageFormatException e) {
-            if (!hasChallengeBeenCalled.booleanValue()) {
-                // If the getChallenge method has not been called the challenge should be available for unmarhslling.
-                // In this case, the thrown Exception is not related to the dispose status 
-                throw e;
-            }
-        }
+        this.challenge = ImageIO.read(in);
     }
 }

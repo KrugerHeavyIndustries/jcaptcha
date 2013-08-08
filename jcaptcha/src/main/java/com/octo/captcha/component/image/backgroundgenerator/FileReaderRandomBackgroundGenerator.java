@@ -21,9 +21,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 import com.octo.captcha.CaptchaException;
-import com.sun.image.codec.jpeg.ImageFormatException;
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageDecoder;
+import javax.imageio.ImageIO;
 
 /**
  * <p>File reader background generator that return a random image (JPEG ONLY) from the ones found in the directory </p>
@@ -197,8 +195,7 @@ public class FileReaderRandomBackgroundGenerator extends
         
         try {
             FileInputStream fis = new FileInputStream(o);
-            JPEGImageDecoder decoder = JPEGCodec.createJPEGDecoder(fis);
-            BufferedImage out = decoder.decodeAsBufferedImage();
+            BufferedImage out = ImageIO.read(fis);
             fis.close();
 
             // Return the format name
@@ -206,9 +203,7 @@ public class FileReaderRandomBackgroundGenerator extends
             
         } catch (IOException e) {
             throw new CaptchaException("Unknown error during file reading ", e);
-        } catch (ImageFormatException e) {
-            return null;
-        }
+        } 
     }
 
     /**

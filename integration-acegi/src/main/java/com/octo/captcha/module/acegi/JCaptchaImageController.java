@@ -7,8 +7,7 @@
 package com.octo.captcha.module.acegi;
 
 import com.octo.captcha.service.image.ImageCaptchaService;
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+import javax.imageio.ImageIO;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
@@ -55,9 +54,7 @@ public class JCaptchaImageController implements Controller, InitializingBean {
         BufferedImage challenge =
                 imageCaptchaService.getImageChallengeForID(captchaId, httpServletRequest.getLocale());
 
-        JPEGImageEncoder jpegEncoder =
-                JPEGCodec.createJPEGEncoder(jpegOutputStream);
-        jpegEncoder.encode(challenge);
+        ImageIO.write(challenge, "jpg", jpegOutputStream);
 
         captchaChallengeAsJpeg = jpegOutputStream.toByteArray();
 

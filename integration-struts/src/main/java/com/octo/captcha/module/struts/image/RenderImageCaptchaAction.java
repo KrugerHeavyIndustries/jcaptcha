@@ -10,8 +10,7 @@ import com.octo.captcha.module.config.CaptchaModuleConfigHelper;
 import com.octo.captcha.module.struts.CaptchaServicePlugin;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+import javax.imageio.ImageIO;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.Action;
@@ -54,10 +53,8 @@ public class RenderImageCaptchaAction extends Action {
                             httpServletRequest.getLocale());
             // the output stream to render the captcha image as jpeg into
 
-            // a jpeg encoder
-            JPEGImageEncoder jpegEncoder =
-                    JPEGCodec.createJPEGEncoder(jpegOutputStream);
-            jpegEncoder.encode(challenge);
+            ImageIO.write(challenge, "jpg", jpegOutputStream);
+
         } catch (IllegalArgumentException e) {
             // log a security warning and return a 404...
             if (log.isWarnEnabled()) {
@@ -69,15 +66,7 @@ public class RenderImageCaptchaAction extends Action {
                 log.error("should never pass here!");
                 return actionMapping.findForward("error");
             }
-        } catch (CaptchaServiceException e) {
-            // log and return a 404 instead of an image...
-            log.warn("Error trying to generate a captcha and "
-                    + "render its challenge as JPEG",
-                    e);
-            httpServletResponse.sendError(HttpServletResponse.SC_NOT_FOUND);
-            // log.error("should never pass here!");
-            return actionMapping.findForward("error");
-        }
+        } 
 
         captchaChallengeAsJpeg = jpegOutputStream.toByteArray();
 

@@ -1,7 +1,6 @@
 package com.octo.captcha.confluence;
 
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
-import com.sun.image.codec.jpeg.JPEGCodec;
+import javax.imageio.ImageIO;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.DefaultManageableImageCaptchaService;
 import com.octo.captcha.service.image.ImageCaptchaService;
@@ -50,10 +49,8 @@ public class JcaptchaImageServlet extends javax.servlet.http.HttpServlet {
                  BufferedImage challenge =
                          ((GimpyFactory)JcaptchaImageMacro.engineRegistry.get(hash)).getImageCaptcha().getImageChallenge();
 
-                 // a jpeg encoder
-                 JPEGImageEncoder jpegEncoder =
-                         JPEGCodec.createJPEGEncoder(jpegOutputStream);
-                 jpegEncoder.encode(challenge);
+                 ImageIO.write(challenge, "jpg", jpegOutputStream);
+
              } catch (IllegalArgumentException e) {
                  httpServletResponse.sendError(HttpServletResponse.SC_NOT_FOUND);
                  return;

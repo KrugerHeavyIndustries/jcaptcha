@@ -11,8 +11,7 @@ import com.octo.captcha.module.jmx.JMXRegistrationHelper;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.ManageableCaptchaService;
 import com.octo.captcha.service.image.ImageCaptchaService;
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+import javax.imageio.ImageIO;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -393,10 +392,8 @@ public class ImageCaptchaFilter implements Filter {
                     this.captchaService.getImageChallengeForID(captchaID, theRequest.getLocale());
             // the output stream to render the captcha image as jpeg into
 
-            // a jpeg encoder
-            JPEGImageEncoder jpegEncoder =
-                    JPEGCodec.createJPEGEncoder(jpegOutputStream);
-            jpegEncoder.encode(challenge);
+            ImageIO.write(challenge, "jpg", jpegOutputStream);
+
         } catch (IllegalArgumentException e) {
             // log a security warning and return a 404...
 //            if (log.isWarnEnabled())
@@ -409,15 +406,7 @@ public class ImageCaptchaFilter implements Filter {
 //                theResponse.sendError(HttpServletResponse.SC_NOT_FOUND);
             return;
 //            }
-        } catch (CaptchaServiceException e) {
-            // log and return a 404 instead of an image...
-//            log.warn(
-//                "Error trying to generate a captcha and "
-//                    + "render its challenge as JPEG",
-//                e);
-            theResponse.sendError(HttpServletResponse.SC_NOT_FOUND);
-            return;
-        }
+        } 
 
         captchaChallengeAsJpeg = jpegOutputStream.toByteArray();
 

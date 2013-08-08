@@ -18,9 +18,7 @@
 
 package com.octo.captcha.engine.image.utils;
 
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGEncodeParam;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+import javax.imageio.ImageIO;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -50,20 +48,8 @@ public class ImageToFile {
 
     public static void encodeJPG(OutputStream sos, BufferedImage image)
             throws IOException {
-        JPEGImageEncoder encoder =
-                JPEGCodec.createJPEGEncoder(sos);
 
-        JPEGEncodeParam param = encoder.getDefaultJPEGEncodeParam(image);
-        //        param.setHorizontalSubsampling(0, 1);
-        //        param.setHorizontalSubsampling(1, 1);
-        //        param.setHorizontalSubsampling(2, 1);
-        //        param.setVerticalSubsampling(0, 1);
-        //        param.setVerticalSubsampling(1, 1);
-        //        param.setVerticalSubsampling(2, 1);
-        param.setQuality(1.0f, false);
-        encoder.setJPEGEncodeParam(param);
-        encoder.encode(image);
-        encoder.getOutputStream().close();
+        ImageIO.write(image, "jpg", sos);
     }
 
 }
